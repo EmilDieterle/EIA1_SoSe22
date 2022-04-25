@@ -1,3 +1,24 @@
+header{
+
+    background: url(assets_4\Bildelemente\woman-7136446_1280.jpg) #FFFFFF; 
+    height: 400px;
+    width: auto;
+}
+
+
+#EIA_Logo {
+
+    background: black;
+    height: 40px;
+}
+
+.header_container{
+
+    width: 800px;
+    margin:auto;
+}
+
+
 .main_container{
 
     width: 800px;
@@ -6,16 +27,10 @@
 
 }
 
-
-
 .navigation_place{
 
-    width: 800px;
-    padding: 0 0 0 0;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 1250px;
+    width: 100px;
+    margin-left: auto;
 }
 
 #navigation_design{
@@ -28,7 +43,8 @@ h3{
     margin-bottom: 10px;
 }
 
-a{
+.unused_navigation{
+
     text-decoration: none;
 }
 
@@ -41,7 +57,7 @@ a{
 .social_media_images{
 
     width: 40px;
-    margin-left: 40px;
+    margin-left: 0;
 }
 
 .social_media_image_place{
@@ -60,11 +76,137 @@ a{
 
 .Schrift{
 
-    color: rgb(26, 24, 24);
+    color: rgb(97, 93, 93);
 }
 
-.Kontaktdaten{
+.kontaktdaten{
 
-    width: 250px;
-    margin-left: 625px;
+    text-align: left;
 }
+
+.footer_container{
+
+    width: 1000px;
+    margin:auto;
+}
+
+#footer_table{
+
+    margin: auto
+
+}
+.background_footer{
+
+    width: auto;
+    height: 200px;
+    background-color: #eaeaea;
+    margin-top: 10px;
+}
+
+.container_bilder{
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto
+}
+
+.container_video{
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+h3{
+
+    text-align: center;
+}
+
+.main_container_contact{
+
+    width: 800px;
+    margin:auto;
+    text-align: left;
+}
+
+
+.boxen{
+
+    width: 100px;
+    background-color: grey;
+    color: white;
+    text-align: left;
+    padding: 5px 500px 5px 5px;
+    margin-top: 10px;
+
+}
+
+#message{
+
+    width: 100px;
+    background-color: grey;
+    color: white;
+    text-align: left;
+    padding: 5px 500px 200px 5px;
+    margin-top: 10px;
+
+
+}
+
+#send{
+
+    width: 70px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+
+.table_about_me{
+
+    margin: auto;
+}
+
+
+
+
+
+
+class = "background_footer"
+
+
+<p class = "Schrift">EIA</p>
+<p class = "Schrift">Allmenstraße 79</p>
+<p class = "Schrift">78120, Furtwangen im Schwarzwald</p>
+<p class = "Schrift">Telefon: +49 15124771099</p>
+<p class = "Schrift">dieterleemil@gmail.com</p>
+
+
+<p class = "Schrift">Follow me</p>
+<img class = "social_media_images" src="assets_4\Bildelemente\icon_insta - Kopie.svg" alt="Bildbeschreibung">
+<img class = "social_media_images" src="assets_4\Bildelemente\icon_youtube - Kopie.svg" alt="Bildbeschreibung">
+<img class = "social_media_images" src="assets_4\Bildelemente\icon_linkedin - Kopie.svg" alt="Bildbeschreibung">
+
+<p class = "Schrift">Copyright © 2022 EIA1</p>
+<p class = "Schrift">All rights reserved</p>
+
+</tr>
+<tr>
+  <td><p class = "Schrift">EIA</p></td>
+  <td>Maria Anders</td>
+  <td>Germany</td>
+</tr>
+<tr>
+  <td>Centro comercial Moctezuma</td>
+  <td>Francisco Chang</td>
+  <td>Mexico</td>
+</tr>
+
+
+
+
+<img id = header_bild  src="assets_4\Bildelemente\woman-7136446_1280.jpg" alt="alt.Bildbeschreibung">
