@@ -1,0 +1,209 @@
+header{
+
+    background: url("assets_test/Bildelemente/header_bild_bearbeitet.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 400px;
+    width: auto;
+}
+
+
+#EIA_Logo {
+
+    height: 40px;
+}
+
+.header_container{
+
+    width: 800px;
+    margin:auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.main_container{
+
+    width: 800px;
+    margin:auto;
+
+}
+
+.navigation_place{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.navigation_design{
+
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navigation_design li a{
+
+    color: rgba(255, 255, 255, 0.548);
+    text-decoration: none;
+
+}
+
+h3{
+    margin-bottom: none;
+    text-align: left;
+}
+
+.used_navigation{
+
+    text-decoration: underline;
+    color: white;
+}
+
+.background_footer{
+
+    background-color: #eaeaea;
+
+}
+
+.social_media_images{
+
+    width: 40px;
+    margin-left: 0;
+    opacity: 50%;
+}
+
+.social_media_images:hover{
+
+opacity: 100%;
+transition: 0.5s;
+}
+
+
+
+#copyright{
+
+    width: 250px;
+    margin-left: 825;
+
+}
+
+.Schrift{
+
+    color: rgb(97, 93, 93);
+}
+
+.kontaktdaten{
+
+    text-align: left;
+}
+
+.footer_container{
+
+    width: 1000px;
+    margin:auto;
+}
+
+#footer_table{
+
+    margin: auto;
+    width: 800px;
+
+}
+.background_footer{
+
+    width: auto;
+    height: 200px;
+    background-color: #eaeaea;
+    margin-top: 10px;
+}
+
+.container_bilder{
+
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto
+}
+
+.container_video{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+h3{
+
+    text-align: center;
+}
+
+.main_container_contact{
+
+    width: 800px;
+    margin:auto;
+    text-align: left;
+}
+
+::placeholder{
+
+    color:white;
+}
+
+
+.boxen{
+
+    display: inline-block;
+    width: 100px;
+    background-color: grey;
+    color: white;
+    text-align: left;
+    padding: 5px 500px 5px 5px;
+    margin-top: 10px;
+
+}
+
+#message{
+
+    display: inline-block;
+    width: 100px;
+    background-color: grey;
+    color: white;
+    text-align: left;
+    padding: 5px 500px 200px 5px;
+    margin-top: 10px;
+
+
+}
+
+#send{
+
+    display: inline-block;
+    width: 70px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.table_about_me{
+
+    margin: auto;
+    margin-bottom: 50%;
+}
+
+body{
+
+    margin: 0;
+}
+
+div:hover img{
+
+}
