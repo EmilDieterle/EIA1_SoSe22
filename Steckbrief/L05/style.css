@@ -240,19 +240,3 @@ body{
     transition: 1s;
 
 }
-
-
-<div>
-  <img class = "header_slides" src="assets_5/Slideshow/Landschaft-Winter2_bearbeitet.jpg" alt=alt.Bildbeschreibung>
-  <img class = "header_slides" src="assets_5/Slideshow/Grüne-Aussicht_bearbeitet.jpg" alt=alt.Bildbeschreibung>
-  <img class = "header_slides" src="assets_5/Slideshow/Lichtstrahl_bearbeitet.jpg" alt=alt.Bildbeschreibung>
-  <img class = "header_slides" src="assets_5/Slideshow/Landschaft-Herbst_bearbeitet.jpg" alt=alt.Bildbeschreibung>
-  <img class = "header_slides"src="assets_5\Slideshow\Landschaft-Winter1_bearbeitet.jpg" alt=alt.Bildbeschreibung>
-</div>
-
-0% {background: url("assets_5/Slideshow/Landschaft-Winter2_bearbeitet.jpg");}
- 25% {background: url("assets_5/Slideshow/Grüne-Aussicht_bearbeitet.jpg");}
- 50% {background: url("assets_5/Slideshow/Lichtstrahl_bearbeitet.jpg");}
- 75% {background: url("assets_5/Slideshow/Landschaft-Herbst_bearbeitet.jpg");}
- 100% {background: url("assets_5/Slideshow/Landschaft-Winter1_bearbeitet.jpg");}
- 
