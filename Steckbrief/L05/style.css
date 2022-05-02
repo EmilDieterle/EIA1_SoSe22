@@ -24,6 +24,31 @@ header{
     
 }
 
+#internship_div{
+
+    position: fixed;
+    z-index: auto;
+    float: right;
+    width: max-content;
+    margin: 50px 0 0 93%;
+    padding: 0 10px 0 10px;
+    background-color: rgb(54, 53, 53);
+    transform: rotate(30deg);
+}
+
+#looking{
+
+    color:rgb(156, 148, 148);
+    text-align: center;
+}
+
+#internship{
+
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
 #EIA_Logo {
 
     height: 40px;
