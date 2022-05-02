@@ -1,25 +1,28 @@
 header{
 
-    background: url("assets_5/Bildelemente/header_bild_bearbeitet.jpg");
     background-repeat: no-repeat; 
     background-size: cover;
+    background-image: initial;
     height: 400px;
     width: auto;
     animation-name: slidein;
+    animation-fill-mode: both;
     animation-duration: 10s;
-    animation-iteration-count: infinite;
     animation-delay: 3s;
-}
-
-@keyframes slidein {
-0% {background: url("assets_5/Bildelemente/header_bild_bearbeitet.jpg");}
-25% {background: url("assets_5/Bildelemente/20211109_153823.jpg");}
-50% {background: url("assets_5/Bildelemente/20211109_153823.jpg");}
-75% {background: url("assets_5/Bildelemente/20220108_110601.jpg");}
-100% {background: url("assets_5/Bildelemente/20220108_110601.jpg");}
+    animation-iteration-count: infinite;
+    zoom:0%;
 
 }
 
+@keyframes slidein{
+
+    0% {background-image: url("assets_5/Slideshow/Landschaft-Winter2_bearbeitet.jpg");}
+    25% {background-image: url("assets_5/Slideshow/Gruene-Aussicht_bearbeitet.jpg");}
+    50% {background-image: url("assets_5/Slideshow/Lichtstrahl_bearbeitet.jpg");}
+    75% {background-image: url("assets_5/Slideshow/Landschaft-Herbst_bearbeitet.jpg");}
+    100% {background-image: url("assets_5/Slideshow/Landschaft-Winter1_bearbeitet.jpg");}
+    
+}
 
 #EIA_Logo {
 
@@ -237,3 +240,19 @@ body{
     transition: 1s;
 
 }
+
+
+<div>
+  <img class = "header_slides" src="assets_5/Slideshow/Landschaft-Winter2_bearbeitet.jpg" alt=alt.Bildbeschreibung>
+  <img class = "header_slides" src="assets_5/Slideshow/Grüne-Aussicht_bearbeitet.jpg" alt=alt.Bildbeschreibung>
+  <img class = "header_slides" src="assets_5/Slideshow/Lichtstrahl_bearbeitet.jpg" alt=alt.Bildbeschreibung>
+  <img class = "header_slides" src="assets_5/Slideshow/Landschaft-Herbst_bearbeitet.jpg" alt=alt.Bildbeschreibung>
+  <img class = "header_slides"src="assets_5\Slideshow\Landschaft-Winter1_bearbeitet.jpg" alt=alt.Bildbeschreibung>
+</div>
+
+0% {background: url("assets_5/Slideshow/Landschaft-Winter2_bearbeitet.jpg");}
+ 25% {background: url("assets_5/Slideshow/Grüne-Aussicht_bearbeitet.jpg");}
+ 50% {background: url("assets_5/Slideshow/Lichtstrahl_bearbeitet.jpg");}
+ 75% {background: url("assets_5/Slideshow/Landschaft-Herbst_bearbeitet.jpg");}
+ 100% {background: url("assets_5/Slideshow/Landschaft-Winter1_bearbeitet.jpg");}
+ 
