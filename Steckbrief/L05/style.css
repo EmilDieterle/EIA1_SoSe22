@@ -27,26 +27,27 @@ header{
 #internship_div{
 
     position: fixed;
-    z-index: auto;
-    float: right;
-    width: max-content;
-    margin: 50px 0 0 93%;
-    padding: 0 10px 0 10px;
-    background-color: rgb(54, 53, 53);
-    transform: rotate(30deg);
+    right: -15vmin;
+    padding: 0 250px 0 250px;
+    margin: 30px 0 0px 0;
+    overflow: hidden;
+    background-color: rgb(75, 71, 71);
+    transform: rotate(25deg);
 }
 
 #looking{
 
-    color:rgb(156, 148, 148);
+    color: white;
     text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #internship{
 
-    text-transform: uppercase;
     color: white;
+    text-transform: uppercase;
     text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #EIA_Logo {
