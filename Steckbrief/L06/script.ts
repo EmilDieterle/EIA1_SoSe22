@@ -22,4 +22,4 @@ var countryGER = "Deutschland";
  var populationSPA = 47.39;
  var populationSPAFuture = 49.35;
 
- console.log("Die Bevölkerung von " + countrySPA + " ist im Jahre 2021 " + populationSPA + " Millionen. Relativ zur Gesamtzahl der Bevölkerung in der EU ist die Bevölkerung in " + countrySPA + " in diesem Jahr: " + populationSPA * 100 / populationEU + "%. Bis zum Jahre 2050 wird sich die Bevölkerung um " + (populationSPAFuture - populationSPA) / populationSPA *100 + "% verändern und " + populationSPAFuture + " Millionen betragen. ");
+ console.log("Die Bevölkerung von " + countrySPA + " ist im Jahre 2021 " + populationSPA + " Millionen. Relativ zur Gesamtzahl der Bevölkerung in der EU ist die Bevölkerung in " + countrySPA + " in diesem Jahr: " + populationSPA * 100 / populationEU + "%. Bis zum Jahre 2050 wird sich die Bevölkerung um " + (populationSPAFuture - populationSPA) / populationSPA *100 + "% verändern. " + "Bevölkerung im Jahre 2050" + populationSPAFuture);
