@@ -26,7 +26,10 @@ namespace L07 {
             document.getElementById("headlineRelativePopulation").innerHTML = (populationGER * 100 / populationEU).toFixed(2)  + "%";
             document.getElementById("headlineGrowthRate").innerHTML = ((populationGERFuture - populationGER) / populationGER *100).toFixed(2) + "%";
             document.getElementById("headlinePopulation2050").innerHTML = populationGERFuture + "Mio";
-            document.querySelector("#germany").setAttribute("class", "active");
+            document.querySelector("#ger").setAttribute("class", "wrapper active");
+            document.querySelector("#fra").setAttribute("class", "wrapper");
+            document.querySelector("#ita").setAttribute("class", "wrapper");
+            document.querySelector("#spa").setAttribute("class", "wrapper");
             document.querySelector("#chart").setAttribute("style" , "height: 18.60%");
         });
 
@@ -36,7 +39,10 @@ namespace L07 {
             document.getElementById("headlineRelativePopulation").innerHTML = (populationFRA * 100 / populationEU).toFixed(2)  + "%";
             document.getElementById("headlineGrowthRate").innerHTML = ((populationFRAFuture - populationFRA) / populationFRA *100).toFixed(2) + "%";
             document.getElementById("headlinePopulation2050").innerHTML = populationFRAFuture + "Mio";
-            document.querySelector("#france").setAttribute("class", "wrapper active")
+            document.querySelector("#fra").setAttribute("class", "wrapper active");
+            document.querySelector("#ger").setAttribute("class", "wrapper");
+            document.querySelector("#ita").setAttribute("class", "wrapper");
+            document.querySelector("#spa").setAttribute("class", "wrapper");
             document.querySelector("#chart").setAttribute("style" , "height: 15.09%");
         });
 
@@ -46,7 +52,10 @@ namespace L07 {
             document.getElementById("headlineRelativePopulation").innerHTML = (populationITA * 100 / populationEU).toFixed(2)  + "%";
             document.getElementById("headlineGrowthRate").innerHTML = ((populationITAFuture - populationITA) / populationITA *100).toFixed(2) + "%";
             document.getElementById("headlinePopulation2050").innerHTML = populationITAFuture + "Mio";
-            document.querySelector("#italy").setAttribute("class", "wrapper active")
+            document.querySelector("#ita").setAttribute("class", "wrapper active")
+            document.querySelector("#ger").setAttribute("class", "wrapper");
+            document.querySelector("#fra").setAttribute("class", "wrapper");
+            document.querySelector("#spa").setAttribute("class", "wrapper");
             document.querySelector("#chart").setAttribute("style" , "height: 13.26%");
         });
 
@@ -56,7 +65,10 @@ namespace L07 {
             document.getElementById("headlineRelativePopulation").innerHTML = (populationSPA * 100 / populationEU).toFixed(2)  + "%";
             document.getElementById("headlineGrowthRate").innerHTML = ((populationSPAFuture - populationSPA) / populationSPA *100).toFixed(2) + "%";
             document.getElementById("headlinePopulation2050").innerHTML = populationSPAFuture + "Mio";
-            document.querySelector("#spain").setAttribute("class", "wrapper active");
+            document.querySelector("#spa").setAttribute("class", "wrapper active");
+            document.querySelector("#ger").setAttribute("class", "wrapper");
+            document.querySelector("#fra").setAttribute("class", "wrapper");
+            document.querySelector("#ita").setAttribute("class", "wrapper");
             document.querySelector("#chart").setAttribute("style" , "height: 10.60%");
         });
 
