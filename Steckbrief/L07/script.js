@@ -1,7 +1,9 @@
 var L07;
 (function (L07) {
     window.addEventListener("load", function () {
+        var union = "EU";
         var populationEU = 447.01;
+        var populationEUFuture = 441.22;
         var countryGER = "Deutschland";
         var populationGER = 83.16;
         var populationGERFuture = 82.67;
@@ -14,6 +16,18 @@ var L07;
         var countrySPA = "Spanien";
         var populationSPA = 47.39;
         var populationSPAFuture = 49.35;
+        var selectorEU = document.getElementById("EU");
+        selectorEU.addEventListener("click", function () {
+            document.getElementById("headlinePopulation2021").innerHTML = populationEU + "Mio";
+            document.getElementById("headlineRelativePopulation").innerHTML = (populationEU * 100 / populationEU).toFixed(2) + "%";
+            document.getElementById("headlineGrowthRate").innerHTML = ((populationEUFuture - populationEU) / populationEU * 100).toFixed(2) + "%";
+            document.getElementById("headlinePopulation2050").innerHTML = populationEUFuture + "Mio";
+            document.querySelector("#ger").setAttribute("class", "wrapper");
+            document.querySelector("#fra").setAttribute("class", "wrapper");
+            document.querySelector("#ita").setAttribute("class", "wrapper");
+            document.querySelector("#spa").setAttribute("class", "wrapper");
+            document.querySelector("#chart").setAttribute("style", "height: 100%");
+        });
         var selectorGER = document.getElementById("germany");
         selectorGER.addEventListener("click", function () {
             document.getElementById("headlinePopulation2021").innerHTML = populationGER + "Mio";
