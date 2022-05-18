@@ -8,7 +8,7 @@ namespace L07 {
 
         var countryGER : string = "Deutschland";
         var populationGER : number = 83.16;
-        var populationGERFuture : number = 82.67;        
+        var populationGERFuture : number = 82.67;
 
         var countryFRA : string = "Frankreich";
         var populationFRA : number = 67.44;
@@ -53,7 +53,8 @@ namespace L07 {
             document.querySelector("#ita").setAttribute("class", "wrapper");
             document.querySelector("#spa").setAttribute("class", "wrapper");
 
-            document.querySelector("#chart").setAttribute("style" , "height: 18.60%");
+            var percentage = (populationGER/populationEU) *100;
+            document.querySelector("#chart").setAttribute("style" , "height:" + percentage + "%");
         });
 
         var selectorFRA: HTMLImageElement = document.getElementById("france") as unknown as HTMLImageElement;
@@ -69,7 +70,8 @@ namespace L07 {
             document.querySelector("#ita").setAttribute("class", "wrapper");
             document.querySelector("#spa").setAttribute("class", "wrapper");
 
-            document.querySelector("#chart").setAttribute("style" , "height: 15.09%");
+            var percentage = (populationFRA/populationEU) *100;
+            document.querySelector("#chart").setAttribute("style" , "height:" + percentage + "%");
         });
 
         var selectorITA: HTMLImageElement = document.getElementById("italy") as unknown as HTMLImageElement;
@@ -85,7 +87,8 @@ namespace L07 {
             document.querySelector("#fra").setAttribute("class", "wrapper");
             document.querySelector("#spa").setAttribute("class", "wrapper");
 
-            document.querySelector("#chart").setAttribute("style" , "height: 13.26%");
+            var percentage = (populationITA/populationEU) *100;
+            document.querySelector("#chart").setAttribute("style" , "height:" + percentage + "%");
         });
 
         var selectorSPA: HTMLImageElement = document.getElementById("spain") as unknown as HTMLImageElement;
@@ -101,7 +104,8 @@ namespace L07 {
             document.querySelector("#fra").setAttribute("class", "wrapper");
             document.querySelector("#ita").setAttribute("class", "wrapper");
 
-            document.querySelector("#chart").setAttribute("style" , "height: 10.60%");
+            var percentage = (populationSPA/populationEU) *100;
+            document.querySelector("#chart").setAttribute("style" , "height:" + percentage + "%");
         });
 
     });
