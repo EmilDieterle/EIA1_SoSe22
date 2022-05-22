@@ -9,31 +9,26 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
+    align-content: center;
     
 }
 
-.btn1-9 {
-
-    margin: auto;
-    color: #307ee6;
-}
-
-.btn1-3 #btn1 { 
+.btn1-3 {
 
     background-color: #307ee6;
 }
 
-.btn4-6 {
+.btn4-7 {
 
-    margin: auto;
-    color: #f8359a;
+    background-color: #f8359a;
 }
 
-.btn7-9 {
+.btn8-9 {
 
-    margin: auto;
-    color: #e38c26;
+    background-color: #e38c26;
 }
+
+
 
 button {
 
@@ -46,3 +41,7 @@ img {
     display: block;
     margin: auto;
 }
+
+#307ee6
+#f8359a
+#e38c26
