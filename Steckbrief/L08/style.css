@@ -12,15 +12,15 @@ body {
     
 }
 
-.btn1-3 {
+.btn1-9 {
 
     margin: auto;
     color: #307ee6;
 }
 
-.btn1-3 #btn1{
+.btn1-3 #btn1 { 
 
-    color: #307ee6;
+    background-color: #307ee6;
 }
 
 .btn4-6 {
