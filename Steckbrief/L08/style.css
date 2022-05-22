@@ -1,0 +1,48 @@
+body {
+
+    background-color: #000000;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    
+}
+
+.btn1-3 {
+
+    margin: auto;
+    color: #307ee6;
+}
+
+.btn1-3 #btn1{
+
+    color: #307ee6;
+}
+
+.btn4-6 {
+
+    margin: auto;
+    color: #f8359a;
+}
+
+.btn7-9 {
+
+    margin: auto;
+    color: #e38c26;
+}
+
+button {
+
+    height: 150px;
+    width: 150px;
+}
+
+img {
+
+    display: block;
+    margin: auto;
+}
