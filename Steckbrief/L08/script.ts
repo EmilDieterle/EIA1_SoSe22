@@ -26,11 +26,11 @@ document.querySelector("btn9").addEventListener('click', function(){playSample("
 document.querySelector("#playButton").addEventListener("click", playButton);
 function playButton(){
     var beat: HTMLAudioElement[] = [new Audio('assets/L08_task_material_assets_DrumPad_kick.mp3'), new Audio('assets/L08_task_material_assets_DrumPad_snare.mp3'), new Audio('assets/L08_task_material_assets_DrumPad_hihat.mp3')];
+    var activeIndex : number = 0;
 
 setInterval(function() {
-    beat[0].play();
-    beat[1].play();
-    beat[2].play();
+    beat[activeIndex].play();
+    activeIndex = activeIndex + 1;
  }, 500);
 
 }
