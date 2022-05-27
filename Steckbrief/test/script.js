@@ -1,9 +1,10 @@
 window.addEventListener("load", function () {
-    var colors = ["rgb(1,88,224)", "#ff0088", "yellow", "rgba(0,0,100,0.5)"];
-    var activeIndex = 0;
-    document.querySelector("#button").addEventListener("click", function () {
-        document.querySelector("body").style.backgroundColor = colors[activeIndex];
-        activeIndex = activeIndex + 1;
-    });
+    var names = ["Ben", "Ella", "Emil", "Emilia", "Emma", "Finn", "Hannah", "Lea", "Leon", "Lina", "Louis", "Luca", "Marie", "Matteo", "Mia", "Mila", "Noah", "Paul", "Sophia", "Theo"];
+    document.querySelector("span").innerHTML = names.length + "";
+    for (var index = 0; index <= names.length; index++) {
+        console.log(index);
+        console.log(names[index]);
+        document.querySelector("#liste").innerHTML += names[index] + "<br>";
+    }
 });
 //# sourceMappingURL=script.js.map
