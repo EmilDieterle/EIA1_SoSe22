@@ -20,17 +20,15 @@ window.addEventListener("load", function () {
         //beat[activeIndex].play();
         //activeIndex = activeIndex + 1;
         //},             500);
-        // if (activeIndex == beat.length) {
-        // activeIndex = 0;
-        //}
-        for (var activeIndex = 0; activeIndex >= beat.length; activeIndex++) {
-            setInterval(function () {
-                beat[activeIndex].play();
-            }, 500);
+        //if (activeIndex == beat.length) {
+        //activeIndex = 0;
+        for (var activeIndex = 0; activeIndex <= beat.length; activeIndex++) {
+            beat[activeIndex].play();
         }
         if (activeIndex == beat.length) {
             activeIndex = 0;
         }
+        //console.log(beat[activeIndex]);
     }
 });
 //# sourceMappingURL=script.js.map
