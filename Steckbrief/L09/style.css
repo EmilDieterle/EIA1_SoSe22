@@ -41,3 +41,39 @@ img {
     display: block;
     margin: auto;
 }
+
+.fa-play {
+
+     color: #ffff; 
+    display: inline-block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}
+
+.fa-pause {
+
+    color: #ffff;
+    display: inline-block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}
+
+.fa-music {
+
+    color: #ffff;
+    display: inline-block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}
+
+i {
+
+    color: white;
+    display: inline-block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}

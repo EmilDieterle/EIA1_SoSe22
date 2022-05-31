@@ -23,28 +23,51 @@ window.addEventListener("load", function (): void {
 
     document.querySelector(".btn9").addEventListener("click", function(): void {playSample("assets/L08_task_material_assets_DrumPad_laugh-2.mp3"); });
 
-    document.querySelector("#playButton").addEventListener("click", playButton);
+    document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton(): void {
-    var beat: HTMLAudioElement[] = [new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"), new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"), new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3")];
-    //var activeIndex: number = 0;
+    var beat: HTMLAudioElement[] = [
+        new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"), 
+        new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"), 
+        new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3")
+    ];
+    var activeIndex: number = 0;
+    var intervalID;
 
-    //setInterval(function(): void {
-    //beat[activeIndex].play();
-    //activeIndex = activeIndex + 1;
- //},             500);
-
-    //if (activeIndex == beat.length) {
-     //activeIndex = 0;
-
-    for (var activeIndex: number = 0; activeIndex <= beat.length; activeIndex++) {
-        beat[activeIndex].play();
-}   if (activeIndex == beat.length) {
+    intervalID = setInterval(function(): void {
+    beat[activeIndex].play();
+    activeIndex = activeIndex + 1;
+    if (activeIndex == beat.length) {
         activeIndex = 0;
     }
-            //console.log(beat[activeIndex]);
+ },                          500);
 
 
-        }
- }
+    function stop(): void {
+    clearInterval(intervalID);
+    document.getElementById("#playButton").addEventListener("click", stop);
+}
+
+}
+
+    //document.getElementById("myDIV").style.display = "none";
+    //document.getElementById("myDIV").style.display = "block";
+        
+} 
+//function playButton(): void {
+  //  var beat: HTMLAudioElement[] = [
+   // "assets/L08_task_material_assets_DrumPad_kick.mp3",
+  //  "assets/L08_task_material_assets_DrumPad_snare.mp3",
+   // "assets/L08_task_material_assets_DrumPad_hihat.mp3",
+   // ];
+   // var activeIndex: number = 0;
+    
+   // setInterval(function(): void {
+   // var beatAktuell = beat[activeIndex];
+    //playSample(beatAktuell);
+  //  activeIndex = activeIndex + 1;
+  //  }, 500);
+
+  //Math.random() // erzeugt eine (quasi) Zufallszahl 
+    //Math.round()  eine einfache Art um eine Gleitkommazahl zu einer Ganzzahl zu runden
 
 );
