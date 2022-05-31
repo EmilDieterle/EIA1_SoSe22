@@ -23,17 +23,9 @@ window.addEventListener("load", function (): void {
 
     document.querySelector(".btn9").addEventListener("click", function(): void {playSample("assets/L08_task_material_assets_DrumPad_laugh-2.mp3"); });
 
-    document.querySelector(".fa-play").addEventListener("click", buttonAenderung);
-    function buttonAenderung(): void {
-        document.querySelector("#play").classList.add("fa-pause");
-        document.querySelector("#play").classList.remove("fa-play");
-    }
-
-    document.querySelector(".fa-pause").addEventListener("click", buttonAenderung);
-    function buttonAenderung(): void {
-        document.querySelector("#play").classList.add("fa-pause");
-        document.querySelector("#play").classList.remove("fa-play");
-    }
+    
+        //document.querySelector("#play").classList.add("fa-play");
+        //document.querySelector("#play").classList.remove("fa-pause");
 
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton(): void {
@@ -44,16 +36,16 @@ window.addEventListener("load", function (): void {
     ];
 
     var activeIndex: number = 0;
-   // var intervalID;
+    //var intervalID;
 
-    var intervalID = setInterval(function(): void {
-    beat[activeIndex].play();
-    //playSample(audio);
+    var intervallID = setInterval(function(): void {
+    var beatAktuell = beat[activeIndex];
+    playSample(beatAktuell);
     activeIndex = activeIndex + 1;
     if (activeIndex == beat.length) {
         activeIndex = 0;
     }
- },                              500);
+ },             500);
 
     function stop(): void {
         clearInterval(intervalID);
@@ -79,6 +71,9 @@ window.addEventListener("load", function (): void {
     setInterval(function(): void {
     beat[Math.round(Math.random() * 9)].play();
     activeIndex = activeIndex + 1;
+    if (activeIndex == beat.length) {
+        activeIndex = 0;
+    }
  },             500);
 
 }
@@ -86,7 +81,18 @@ window.addEventListener("load", function (): void {
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
         
-} 
+}
+
+    document.querySelector(".fa-play").addEventListener("click", buttonAenderung);
+    function buttonAenderung(): void {
+        document.querySelector("#play").setAttribute("class", "fas fa-pause");
+        document.querySelector("#play").classList.remove("fa-play");
+
+        if (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
+            document.querySelector("#play").setAttribute("class", "fas fa-pause");
+        }
+
+    }
 //function playButton(): void {
   //  var beat: HTMLAudioElement[] = [
    // "assets/L08_task_material_assets_DrumPad_kick.mp3",
