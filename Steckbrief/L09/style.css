@@ -44,7 +44,7 @@ img {
 
 .fa-play {
 
-     color: #ffff; 
+    color: #ffff; 
     display: inline-block;
     margin: auto;
     height: 150px;
@@ -69,11 +69,32 @@ img {
     width: 150px;
 }
 
-i {
+#play {
 
-    color: white;
-    display: inline-block;
+    color: #ffff; 
+    display: block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+
+}
+
+#pause {
+
+    color: #ffff; 
+    display: block;
     margin: auto;
     height: 150px;
     width: 150px;
 }
+
+#remix {
+
+    color: #ffff; 
+    display: block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}
+

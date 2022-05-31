@@ -12,18 +12,28 @@ window.addEventListener("load", function () {
     document.querySelector(".btn7").addEventListener("click", function () { playSample("assets/L08_task_material_assets_DrumPad_G.mp3"); });
     document.querySelector(".btn8").addEventListener("click", function () { playSample("assets/L08_task_material_assets_DrumPad_laugh-1.mp3"); });
     document.querySelector(".btn9").addEventListener("click", function () { playSample("assets/L08_task_material_assets_DrumPad_laugh-2.mp3"); });
+    document.querySelector(".fa-play").addEventListener("click", buttonAenderung);
+    function buttonAenderung() {
+        document.querySelector("#play").classList.add("fa-pause");
+        document.querySelector("#play").classList.remove("fa-play");
+    }
+    document.querySelector(".fa-pause").addEventListener("click", buttonAenderung);
+    function buttonAenderung() {
+        document.querySelector("#play").classList.add("fa-pause");
+        document.querySelector("#play").classList.remove("fa-play");
+    }
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton() {
         var beat = [
-        // "assets/L08_task_material_assets_DrumPad_kick.mp3", 
-        //  "assets/L08_task_material_assets_DrumPad_snare.mp3", 
-        //  "assets/L08_task_material_assets_DrumPad_hihat.mp3",
+            new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"),
+            new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"),
+            new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3")
         ];
         var activeIndex = 0;
-        var intervalID;
-        intervalID = setInterval(function () {
-            var beatAktuell = beat[activeIndex];
-            // playSample(beatAktuell);
+        // var intervalID;
+        var intervalID = setInterval(function () {
+            beat[activeIndex].play();
+            //playSample(audio);
             activeIndex = activeIndex + 1;
             if (activeIndex == beat.length) {
                 activeIndex = 0;
@@ -33,27 +43,27 @@ window.addEventListener("load", function () {
             clearInterval(intervalID);
         }
         document.getElementById("#playButton").addEventListener("click", stop);
-    }
-    document.querySelector(".fa-music").addEventListener("click", playRemix);
-    function playRemix() {
-        var beat = [
-            new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_A.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_C.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_F.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_G.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_laugh-1.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_laugh-2.mp3")
-        ];
-        var activeIndex;
-        setInterval(function () {
-            beat[Math.round(Math.random() * 9)].play();
-            activeIndex = activeIndex + 1;
-        }, 500);
-        //document.getElementById("myDIV").style.display = "none";
-        //document.getElementById("myDIV").style.display = "block";
+        document.querySelector(".fa-music").addEventListener("click", playRemix);
+        function playRemix() {
+            var beat = [
+                new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_A.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_C.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_F.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_G.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_laugh-1.mp3"),
+                new Audio("assets/L08_task_material_assets_DrumPad_laugh-2.mp3")
+            ];
+            var activeIndex;
+            setInterval(function () {
+                beat[Math.round(Math.random() * 9)].play();
+                activeIndex = activeIndex + 1;
+            }, 500);
+        }
+        //document.getElementById("#pause").style.display = "none";
+        //document.getElementById("#play").style.display = "block";
     }
     //function playButton(): void {
     //  var beat: HTMLAudioElement[] = [
