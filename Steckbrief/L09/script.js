@@ -12,8 +12,6 @@ window.addEventListener("load", function () {
     document.querySelector(".btn7").addEventListener("click", function () { playSample("assets/L08_task_material_assets_DrumPad_G.mp3"); });
     document.querySelector(".btn8").addEventListener("click", function () { playSample("assets/L08_task_material_assets_DrumPad_laugh-1.mp3"); });
     document.querySelector(".btn9").addEventListener("click", function () { playSample("assets/L08_task_material_assets_DrumPad_laugh-2.mp3"); });
-    //document.querySelector("#play").classList.add("fa-play");
-    //document.querySelector("#play").classList.remove("fa-pause");
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton() {
         var beat = [
@@ -22,8 +20,9 @@ window.addEventListener("load", function () {
             "assets/L08_task_material_assets_DrumPad_hihat.mp3"
         ];
         var activeIndex = 0;
-        //var intervalID;
-        var intervallID = setInterval(function () {
+        var intervalID;
+        //intervalID = setInterval(playSample, 500);
+        var IntervalID = setInterval(function () {
             var beatAktuell = beat[activeIndex];
             playSample(beatAktuell);
             activeIndex = activeIndex + 1;
@@ -64,8 +63,11 @@ window.addEventListener("load", function () {
     function buttonAenderung() {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         document.querySelector("#play").classList.remove("fa-play");
-        if (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
-            document.querySelector("#play").setAttribute("class", "fas fa-pause");
+        document.querySelector(".fa-play").addEventListener("click", buttonAenderung2);
+        function buttonAenderung2() {
+            while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
+                document.querySelector("#play").setAttribute("class", "fas fa-play");
+            }
         }
     }
     //function playButton(): void {
@@ -82,5 +84,7 @@ window.addEventListener("load", function () {
     //  }, 500);
     //Math.random() // erzeugt eine (quasi) Zufallszahl 
     //Math.round()  eine einfache Art um eine Gleitkommazahl zu einer Ganzzahl zu runden
+    //document.querySelector("#play").classList.add("fa-play");
+    //document.querySelector("#play").classList.remove("fa-pause");
 });
 //# sourceMappingURL=script.js.map
