@@ -17,9 +17,9 @@ window.addEventListener("load", function () {
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton() {
         var beat = [
-            new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3")
+            "assets/L08_task_material_assets_DrumPad_kick.mp3",
+            "assets/L08_task_material_assets_DrumPad_snare.mp3",
+            "assets/L08_task_material_assets_DrumPad_hihat.mp3"
         ];
         var activeIndex = 0;
         //var intervalID;

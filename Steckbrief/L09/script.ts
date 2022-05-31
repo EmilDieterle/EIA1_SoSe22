@@ -30,9 +30,9 @@ window.addEventListener("load", function (): void {
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton(): void {
     var beat: HTMLAudioElement[] = [
-       new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"), 
-       new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"), 
-       new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3")
+       "assets/L08_task_material_assets_DrumPad_kick.mp3", 
+       "assets/L08_task_material_assets_DrumPad_snare.mp3", 
+       "assets/L08_task_material_assets_DrumPad_hihat.mp3"
     ];
 
     var activeIndex: number = 0;
