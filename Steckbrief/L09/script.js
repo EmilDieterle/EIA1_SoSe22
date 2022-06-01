@@ -14,6 +14,7 @@ window.addEventListener("load", function () {
     document.querySelector(".btn9").addEventListener("click", function () { playSample("assets/L08_task_material_assets_DrumPad_laugh-2.mp3"); });
     var intervalID;
     var intervalID2;
+    var beatAktuell;
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton() {
         var beat = [
@@ -65,19 +66,21 @@ window.addEventListener("load", function () {
     }
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
-    document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
-    function pausePlayButton() {
+    document.querySelector(".fa-play").addEventListener("click", startPlayButton);
+    function startPlayButton() {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         document.querySelector("#play").classList.remove("fa-play");
-        document.querySelector(".fa-play").addEventListener("click", startPlayButton);
-        function startPlayButton() {
+        document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
+        function pausePlayButton() {
+            clearInterval(intervalID2);
             while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
                 document.querySelector("#play").setAttribute("class", "fas fa-play");
             }
         }
     }
-    document.querySelector(".fa-music").addEventListener("click", buttonMusic);
+    document.querySelector(".fa-music").addEventListener("click", playRemix);
     function buttonMusic() {
+        document.querySelector("");
         clearInterval(intervalID);
     }
     //document.querySelector("#remix").addEventListener("click", start);

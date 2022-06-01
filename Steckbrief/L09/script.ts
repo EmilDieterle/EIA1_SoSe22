@@ -25,6 +25,8 @@ window.addEventListener("load", function (): void {
 
     var intervalID;
     var  intervalID2;
+    var  beatAktuell;
+
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton(): void {
     var beat: HTMLAudioElement[] = [
@@ -87,21 +89,23 @@ window.addEventListener("load", function (): void {
     //document.getElementById("#play").style.display = "block";
         
 
-    document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
-    function pausePlayButton(): void {
+    document.querySelector(".fa-play").addEventListener("click", startPlayButton);
+    function startPlayButton(): void {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         document.querySelector("#play").classList.remove("fa-play");
 
-        document.querySelector(".fa-play").addEventListener("click", startPlayButton);
-        function startPlayButton(): void {
-        while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
+        document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
+        function pausePlayButton(): void {
+            clearInterval(intervalID2);
+            while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
             document.querySelector("#play").setAttribute("class", "fas fa-play");
         }
     }
     }
 
-    document.querySelector(".fa-music").addEventListener("click", buttonMusic);
+    document.querySelector(".fa-music").addEventListener("click", playRemix);
     function buttonMusic(): void {
+        document.querySelector("")
         clearInterval(intervalID);
             
         }
