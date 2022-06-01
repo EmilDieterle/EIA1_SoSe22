@@ -88,13 +88,14 @@ window.addEventListener("load", function (): void {
     //document.getElementById("#play").style.display = "block";
         
 
-    document.querySelector(".fa-play").addEventListener("click", buttonAenderung);
-    function buttonAenderung(): void {
+    document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
+    function pausePlayButton(): void {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         document.querySelector("#play").classList.remove("fa-play");
+        clearInterval(intervalID2);
 
-        document.querySelector(".fa-play").addEventListener("click", buttonAenderung2);
-        function buttonAenderung2(): void {
+        document.querySelector(".fa-play").addEventListener("click", startPlayButton);
+        function startPlayButton(): void {
         while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
             document.querySelector("#play").setAttribute("class", "fas fa-play");
         }
@@ -103,8 +104,11 @@ window.addEventListener("load", function (): void {
 
     document.querySelector(".fa-music").addEventListener("click", buttonMusic);
     function buttonMusic(): void {
-        document.querySelector("#remix").addEventListener("click", start);
-        document.querySelector("#play").addEventListener("click", stop);
+        while (condition) {
+            
+        }
+        //document.querySelector("#remix").addEventListener("click", start);
+        //document.querySelector("#play").addEventListener("click", stop);
 
 //function playButton(): void {
   //  var beat: HTMLAudioElement[] = [
