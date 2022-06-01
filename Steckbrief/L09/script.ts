@@ -31,7 +31,6 @@ window.addEventListener("load", function (): void {
        "assets/L08_task_material_assets_DrumPad_snare.mp3", 
        "assets/L08_task_material_assets_DrumPad_hihat.mp3"
     ];
-
     var activeIndex: number = 0;
     var intervalID;
 
@@ -44,15 +43,15 @@ window.addEventListener("load", function (): void {
     if (activeIndex == beat.length) {
         activeIndex = 0;
     }
- },                               500);
-
+ },                              500);
+}
     function stop(): void {
         clearInterval(intervalID);
 }
 
-    document.getElementById("#playButton").addEventListener("click", stop);
+    //document.getElementById("#playButton").addEventListener("click", stop);
 
-    document.querySelector(".fa-music").addEventListener("click", playRemix);
+    document.querySelector(".fa-music").addEventListener("click", function(): void {playRemix(); });
     function playRemix(): void {
     var beat: HTMLAudioElement[] = [
         new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"), 
@@ -66,21 +65,20 @@ window.addEventListener("load", function (): void {
         new Audio("assets/L08_task_material_assets_DrumPad_laugh-2.mp3")
     ];
 
+    console.log(playRemix);
+
     var activeIndex: number;
     setInterval(function(): void {
     beat[Math.round(Math.random() * 9)].play();
     activeIndex = activeIndex + 1;
-    if (activeIndex == beat.length) {
-        activeIndex = 0;
-    }
+    //if (activeIndex == beat.length) {
+        //activeIndex = 0;
+    //}
  },             500);
-
 }
-
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
         
-}
 
     document.querySelector(".fa-play").addEventListener("click", buttonAenderung);
     function buttonAenderung(): void {
