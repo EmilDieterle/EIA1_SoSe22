@@ -23,7 +23,8 @@ window.addEventListener("load", function (): void {
 
     document.querySelector(".btn9").addEventListener("click", function(): void {playSample("assets/L08_task_material_assets_DrumPad_laugh-2.mp3"); });
 
-
+    var intervalID;
+    var  intervalID2;
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton(): void {
     var beat: HTMLAudioElement[] = [
@@ -34,8 +35,6 @@ window.addEventListener("load", function (): void {
     console.log(playButton);
 
     var activeIndex: number = 0;
-    var intervalID;
-    var  intervalID2;
 
     //intervalID = setInterval(playSample, 500);
 
@@ -92,7 +91,6 @@ window.addEventListener("load", function (): void {
     function pausePlayButton(): void {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         document.querySelector("#play").classList.remove("fa-play");
-        clearInterval(intervalID2);
 
         document.querySelector(".fa-play").addEventListener("click", startPlayButton);
         function startPlayButton(): void {
@@ -104,7 +102,7 @@ window.addEventListener("load", function (): void {
 
     document.querySelector(".fa-music").addEventListener("click", buttonMusic);
     function buttonMusic(): void {
-        while (condition) {
+        clearInterval(intervalID);
             
         }
         //document.querySelector("#remix").addEventListener("click", start);
