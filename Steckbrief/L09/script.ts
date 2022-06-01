@@ -31,8 +31,11 @@ window.addEventListener("load", function (): void {
        "assets/L08_task_material_assets_DrumPad_snare.mp3", 
        "assets/L08_task_material_assets_DrumPad_hihat.mp3"
     ];
+    console.log(playButton);
+
     var activeIndex: number = 0;
     var intervalID;
+    var  intervalID2;
 
     //intervalID = setInterval(playSample, 500);
 
@@ -47,6 +50,11 @@ window.addEventListener("load", function (): void {
 }
     function stop(): void {
         clearInterval(intervalID);
+}
+
+    function start(intervalID2): void {
+    intervalID2 = setInterval(playRemix);
+
 }
 
     //document.getElementById("#playButton").addEventListener("click", stop);
@@ -68,13 +76,13 @@ window.addEventListener("load", function (): void {
     console.log(playRemix);
 
     var activeIndex: number;
-    setInterval(function(): void {
+    var intervalID2 = setInterval(function(): void {
     beat[Math.round(Math.random() * 9)].play();
     activeIndex = activeIndex + 1;
     //if (activeIndex == beat.length) {
         //activeIndex = 0;
     //}
- },             500);
+ },                               500);
 }
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
@@ -92,6 +100,12 @@ window.addEventListener("load", function (): void {
         }
     }
     }
+
+    document.querySelector(".fa-music").addEventListener("click", buttonMusic);
+    function buttonMusic(): void {
+        document.querySelector("#remix").addEventListener("click", start);
+        document.querySelector("#play").addEventListener("click", stop);
+
 //function playButton(): void {
   //  var beat: HTMLAudioElement[] = [
    // "assets/L08_task_material_assets_DrumPad_kick.mp3",
