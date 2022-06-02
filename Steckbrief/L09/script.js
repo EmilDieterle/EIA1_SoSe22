@@ -16,6 +16,8 @@ window.addEventListener("load", function () {
     var intervalID2;
     var beatAktuell;
     var beatAktuell2;
+    var pauseIcon = "fa-pause";
+    var playIcon = "fa-play";
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton() {
         var beat = [
@@ -68,8 +70,12 @@ window.addEventListener("load", function () {
     //Button Play
     document.querySelector(".fa-play").addEventListener("click", startPlayButton);
     function startPlayButton() {
-        document.querySelector("#play").setAttribute("class", "fas fa-pause");
-        document.querySelector("#play").classList.remove("fa-play");
+        document.querySelector(".fa-play").classList.add("fa-pause");
+        document.querySelector(".fa-play").classList.remove("fa-play");
+    }
+    if (playIcon.classList.contains('fa-eye')) {
+        "play".classList.remove("fa-pause");
+        document.querySelector("#play").setAttribute("class", "fas fa-play");
     }
     //Button Stop
     //document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
@@ -87,6 +93,8 @@ window.addEventListener("load", function () {
     }
     document.querySelector("fa-music").addEventListener("click", stopPlay);
     document.querySelector("fa-play").addEventListener("click", stopRemix);
+    console.log(stopPlay);
+    console.log(stopRemix);
 });
 //function stop(): void {
 //clearInterval(intervalID);
