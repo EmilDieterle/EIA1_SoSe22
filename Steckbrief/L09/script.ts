@@ -39,18 +39,14 @@ window.addEventListener("load", function (): void {
     var activeIndex: number = 0;
 
     //intervalID = setInterval(playSample, 500);
-
-    var IntervalID = setInterval(function(): void {
-    var beatAktuell = beat[activeIndex];
+    intervalID = setInterval(function(): void {
+    beatAktuell = beat[activeIndex];
     playSample(beatAktuell);
     activeIndex = activeIndex + 1;
     if (activeIndex == beat.length) {
         activeIndex = 0;
     }
- },                              500);
-}
-    function stop(): void {
-        clearInterval(intervalID);
+ },                          500);
 }
 
     function start(intervalID2): void {
@@ -77,38 +73,48 @@ window.addEventListener("load", function (): void {
     console.log(playRemix);
 
     var activeIndex: number;
-    var intervalID2 = setInterval(function(): void {
+    intervalID2 = setInterval(function(): void {
     beat[Math.round(Math.random() * 9)].play();
     activeIndex = activeIndex + 1;
     //if (activeIndex == beat.length) {
         //activeIndex = 0;
     //}
- },                               500);
+ },                           500);
 }
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
         
-
+//Button Play
     document.querySelector(".fa-play").addEventListener("click", startPlayButton);
     function startPlayButton(): void {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         document.querySelector("#play").classList.remove("fa-play");
 
-        document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
-        function pausePlayButton(): void {
-            clearInterval(intervalID2);
-            while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
-            document.querySelector("#play").setAttribute("class", "fas fa-play");
-        }
     }
-    }
+//Button Stop
+        //document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
+        //function pausePlayButton(): void {
+            //clearInterval(intervalID2);
+            //while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
+            //document.querySelector("#play").setAttribute("class", "fas fa-play");
+        //}
+    //}
 
-    document.querySelector(".fa-music").addEventListener("click", playRemix);
-    function buttonMusic(): void {
-        document.querySelector("")
-        clearInterval(intervalID);
+    function stopPlay(): void {
+    clearInterval(intervalID);
+}
+
+    function stopRemix(): void {
+    clearInterval(intervalID2);
+}
+
+    document.querySelector("fa-music").addEventListener("click", stopPlay);
+    document.querySelector("fa-play").addEventListener("click", stopRemix);
+    
+});
+    //function stop(): void {
+        //clearInterval(intervalID);
             
-        }
         //document.querySelector("#remix").addEventListener("click", start);
         //document.querySelector("#play").addEventListener("click", stop);
 
@@ -131,4 +137,3 @@ window.addEventListener("load", function (): void {
 
     //document.querySelector("#play").classList.add("fa-play");
         //document.querySelector("#play").classList.remove("fa-pause");
-} );

@@ -1,13 +1,73 @@
 window.addEventListener("load", function() {
 
-    var names: string[] = ["Ben", "Ella", "Emil", "Emilia", "Emma", "Finn", "Hannah", "Lea", "Leon", "Lina", "Louis", "Luca", "Marie", "Matteo", "Mia", "Mila", "Noah", "Paul", "Sophia", "Theo"];
+interface persons {
 
-    document.querySelector("span").innerHTML = names.length +"";
+    name: string,
+    age: number,
+    hair: string
+    friends: number;
+}
 
-        for (var index: number = 0; index <= names.length; index++) {
-            console.log(index);
-            console.log(names[index]);
+var emil: persons = {
+name: "Emil",
+age: 21,
+hair: "brown",
+friends: 8
+}
 
-            document.querySelector("#liste").innerHTML += names[index] + "<br>";
-        }
-    })
+var emillian: persons = {
+    name: "Emillian",
+    age: 20,
+    hair: "blonde",
+    friends: 5
+    }
+
+var emilio: persons = {
+    name: "Emilio",
+    age: 19,
+    hair: "black",
+    friends: 3
+    }
+    
+console.log(emil);
+console.log(emillian);
+console.log(emilio);
+
+var names: persons[] = [
+{   name: "Emil",
+    age: 21,
+    hair: "brown",
+    friends: 8
+},
+{   name: "Emillian",
+    age: 20,
+    hair: "blonde",
+    friends: 5
+},
+{
+    name: "Emilio",
+    age: 19,
+    hair: "black",
+    friends: 3
+},
+];
+
+console.log(names);
+
+for (let index = 0; index < names.length; index++) {
+        console.log(names[index].name);
+        console.log(names[index].age);
+        console.log(names[index].hair);  
+        console.log(names[index].friends);  
+}
+
+for (let index = 0; index < names.length; index++) {
+    const element = names[index];
+    
+}
+    
+
+
+
+
+})

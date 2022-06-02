@@ -25,17 +25,14 @@ window.addEventListener("load", function () {
         console.log(playButton);
         var activeIndex = 0;
         //intervalID = setInterval(playSample, 500);
-        var IntervalID = setInterval(function () {
-            var beatAktuell = beat[activeIndex];
+        intervalID = setInterval(function () {
+            beatAktuell = beat[activeIndex];
             playSample(beatAktuell);
             activeIndex = activeIndex + 1;
             if (activeIndex == beat.length) {
                 activeIndex = 0;
             }
         }, 500);
-    }
-    function stop() {
-        clearInterval(intervalID);
     }
     function start(intervalID2) {
         intervalID2 = setInterval(playRemix);
@@ -56,7 +53,7 @@ window.addEventListener("load", function () {
         ];
         console.log(playRemix);
         var activeIndex;
-        var intervalID2 = setInterval(function () {
+        intervalID2 = setInterval(function () {
             beat[Math.round(Math.random() * 9)].play();
             activeIndex = activeIndex + 1;
             //if (activeIndex == beat.length) {
@@ -66,40 +63,47 @@ window.addEventListener("load", function () {
     }
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
+    //Button Play
     document.querySelector(".fa-play").addEventListener("click", startPlayButton);
     function startPlayButton() {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         document.querySelector("#play").classList.remove("fa-play");
-        document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
-        function pausePlayButton() {
-            clearInterval(intervalID2);
-            while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
-                document.querySelector("#play").setAttribute("class", "fas fa-play");
-            }
-        }
     }
-    document.querySelector(".fa-music").addEventListener("click", playRemix);
-    function buttonMusic() {
-        document.querySelector("");
+    //Button Stop
+    //document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
+    //function pausePlayButton(): void {
+    //clearInterval(intervalID2);
+    //while (document.querySelector("#play").getAttribute("class") == "fas fa-pause") {
+    //document.querySelector("#play").setAttribute("class", "fas fa-play");
+    //}
+    //}
+    function stopPlay() {
         clearInterval(intervalID);
     }
-    //document.querySelector("#remix").addEventListener("click", start);
-    //document.querySelector("#play").addEventListener("click", stop);
-    //function playButton(): void {
-    //  var beat: HTMLAudioElement[] = [
-    // "assets/L08_task_material_assets_DrumPad_kick.mp3",
-    //  "assets/L08_task_material_assets_DrumPad_snare.mp3",
-    // "assets/L08_task_material_assets_DrumPad_hihat.mp3",
-    // ];
-    // var activeIndex: number = 0;
-    // setInterval(function(): void {
-    // var beatAktuell = beat[activeIndex];
-    //playSample(beatAktuell);
-    //  activeIndex = activeIndex + 1;
-    //  }, 500);
-    //Math.random() // erzeugt eine (quasi) Zufallszahl 
-    //Math.round()  eine einfache Art um eine Gleitkommazahl zu einer Ganzzahl zu runden
-    //document.querySelector("#play").classList.add("fa-play");
-    //document.querySelector("#play").classList.remove("fa-pause");
+    function stopRemix() {
+        clearInterval(intervalID2);
+    }
+    document.querySelector("fa-music").addEventListener("click", stopPlay);
+    document.querySelector("fa-play").addEventListener("click", stopRemix);
 });
+//function stop(): void {
+//clearInterval(intervalID);
+//document.querySelector("#remix").addEventListener("click", start);
+//document.querySelector("#play").addEventListener("click", stop);
+//function playButton(): void {
+//  var beat: HTMLAudioElement[] = [
+// "assets/L08_task_material_assets_DrumPad_kick.mp3",
+//  "assets/L08_task_material_assets_DrumPad_snare.mp3",
+// "assets/L08_task_material_assets_DrumPad_hihat.mp3",
+// ];
+// var activeIndex: number = 0;
+// setInterval(function(): void {
+// var beatAktuell = beat[activeIndex];
+//playSample(beatAktuell);
+//  activeIndex = activeIndex + 1;
+//  }, 500);
+//Math.random() // erzeugt eine (quasi) Zufallszahl 
+//Math.round()  eine einfache Art um eine Gleitkommazahl zu einer Ganzzahl zu runden
+//document.querySelector("#play").classList.add("fa-play");
+//document.querySelector("#play").classList.remove("fa-pause");
 //# sourceMappingURL=script.js.map
