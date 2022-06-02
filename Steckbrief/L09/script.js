@@ -15,6 +15,7 @@ window.addEventListener("load", function () {
     var intervalID;
     var intervalID2;
     var beatAktuell;
+    var beatAktuell2;
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton() {
         var beat = [
@@ -41,20 +42,21 @@ window.addEventListener("load", function () {
     document.querySelector(".fa-music").addEventListener("click", function () { playRemix(); });
     function playRemix() {
         var beat = [
-            new Audio("assets/L08_task_material_assets_DrumPad_kick.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_snare.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_hihat.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_A.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_C.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_F.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_G.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_laugh-1.mp3"),
-            new Audio("assets/L08_task_material_assets_DrumPad_laugh-2.mp3")
+            "assets/L08_task_material_assets_DrumPad_kick.mp3",
+            "assets/L08_task_material_assets_DrumPad_snare.mp3",
+            "assets/L08_task_material_assets_DrumPad_hihat.mp3",
+            "assets/L08_task_material_assets_DrumPad_A.mp3",
+            "assets/L08_task_material_assets_DrumPad_C.mp3",
+            "assets/L08_task_material_assets_DrumPad_F.mp3",
+            "assets/L08_task_material_assets_DrumPad_G.mp3",
+            "assets/L08_task_material_assets_DrumPad_laugh-1.mp3",
+            "assets/L08_task_material_assets_DrumPad_laugh-2.mp3"
         ];
         console.log(playRemix);
         var activeIndex;
         intervalID2 = setInterval(function () {
-            beat[Math.round(Math.random() * 9)].play();
+            beatAktuell2 = beat[Math.round(Math.random() * 9)];
+            playSample(beatAktuell2);
             activeIndex = activeIndex + 1;
             //if (activeIndex == beat.length) {
             //activeIndex = 0;
