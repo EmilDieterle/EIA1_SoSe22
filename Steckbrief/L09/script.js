@@ -111,7 +111,7 @@ window.addEventListener("load", function () {
     document.querySelector(".fa-music").addEventListener("click", stopPlay);
     document.querySelector(".fa-play").addEventListener("click", stopRemix);
     document.querySelector(".fa-pause").addEventListener("click", stopRemix);
-    //document.querySelector(".fa-play").addEventListener("click", playSample);
+    document.querySelector(".fa-pause").addEventListener("click", stopPlay);
     console.log(stopPlay);
     console.log(stopRemix);
 });
