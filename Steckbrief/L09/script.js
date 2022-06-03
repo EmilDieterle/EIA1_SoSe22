@@ -16,8 +16,8 @@ window.addEventListener("load", function () {
     var intervalID2;
     var beatAktuell;
     var beatAktuell2;
-    var pauseIcon = "fa-pause";
-    var playIcon = "fa-play";
+    //var pause = "fa-pause";
+    //var icon = "fa-play";
     document.querySelector(".fa-play").addEventListener("click", playButton);
     function playButton() {
         var beat = [
@@ -68,28 +68,32 @@ window.addEventListener("load", function () {
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
     //Button Play
-    //document.querySelector(".fa-play").addEventListener("click", startPlayButton);
-    //function startPlayButton(): void {
-    //document.querySelector(".fa-play").classList.add("fa-pause");
-    //document.querySelector(".fa-play").classList.remove("fa-play");
-    //}
+    document.querySelector(".fa-play").addEventListener("click", startPlayButton);
+    function startPlayButton() {
+        document.querySelector(".fa-play").classList.add("hidden");
+        document.querySelector(".fa-pause").classList.remove("hidden");
+        //document.querySelector(".fa-play").classList.remove("fa-play");
+    }
+    document.querySelector(".fa-pause").addEventListener("click", stopPlayButton);
+    function stopPlayButton() {
+        document.querySelector(".fa-pause").classList.add("hidden");
+        document.querySelector(".fa-play").classList.remove("hidden");
+    }
     //if (playIcon.classList.contains("fa-pause")) {
     //playIcon.classList.remove("fa-pause");
     //document.querySelector(".fa-play").classList.add("fa-play");
     //}
-    document.querySelector(".fa-play").addEventListener("click", function () {
-        var icon = this.querySelector(".fa-play");
-        var text = this.querySelector("fa-pause");
-        if (icon.classList.contains("fa-play")) {
-            icon.classList.remove("fa-play");
-            icon.classList.add("fa-pause");
-            text.innerHTML = "Hide";
-            //} else {
-            //icon.classList.remove("fa-pause");
-            //icon.classList.add("fa-play");
-            //text.innerHTML = "Show";
-        }
-    });
+    //document.querySelector(".fa-play").addEventListener("click", function() {
+    //var icon = this.querySelector(".fa-play");
+    //var pause = this.querySelector("fa-pause");
+    //if (icon.classList.contains("fa-play")) {
+    //icon.classList.remove("fa-play");
+    //icon.classList.add("fa-pause");
+    //} else {
+    //icon.classList.remove("fa-pause");
+    //icon.classList.add("fa-play");
+    //}
+    //});
     //Button Stop
     //document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
     //function pausePlayButton(): void {
@@ -104,8 +108,10 @@ window.addEventListener("load", function () {
     function stopRemix() {
         clearInterval(intervalID2);
     }
-    document.querySelector("fa-music").addEventListener("click", stopPlay);
-    document.querySelector("fa-play").addEventListener("click", stopRemix);
+    document.querySelector(".fa-music").addEventListener("click", stopPlay);
+    document.querySelector(".fa-play").addEventListener("click", stopRemix);
+    document.querySelector(".fa-pause").addEventListener("click", stopRemix);
+    //document.querySelector(".fa-play").addEventListener("click", playSample);
     console.log(stopPlay);
     console.log(stopRemix);
 });

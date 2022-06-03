@@ -87,6 +87,7 @@ img {
     margin: auto;
     height: 150px;
     width: 150px;
+    margin-top: 50px;
 }
 
 #remix {
@@ -96,5 +97,10 @@ img {
     margin: auto;
     height: 150px;
     width: 150px;
+}
+
+.hidden {
+
+    display: none !important;
 }
 
