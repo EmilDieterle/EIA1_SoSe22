@@ -68,15 +68,28 @@ window.addEventListener("load", function () {
     //document.getElementById("#pause").style.display = "none";
     //document.getElementById("#play").style.display = "block";
     //Button Play
-    document.querySelector(".fa-play").addEventListener("click", startPlayButton);
-    function startPlayButton() {
-        document.querySelector(".fa-play").classList.add("fa-pause");
-        document.querySelector(".fa-play").classList.remove("fa-play");
-    }
-    if (playIcon.classList.contains('fa-eye')) {
-        "play".classList.remove("fa-pause");
-        document.querySelector("#play").setAttribute("class", "fas fa-play");
-    }
+    //document.querySelector(".fa-play").addEventListener("click", startPlayButton);
+    //function startPlayButton(): void {
+    //document.querySelector(".fa-play").classList.add("fa-pause");
+    //document.querySelector(".fa-play").classList.remove("fa-play");
+    //}
+    //if (playIcon.classList.contains("fa-pause")) {
+    //playIcon.classList.remove("fa-pause");
+    //document.querySelector(".fa-play").classList.add("fa-play");
+    //}
+    document.querySelector(".fa-play").addEventListener("click", function () {
+        var icon = this.querySelector(".fa-play");
+        var text = this.querySelector("fa-pause");
+        if (icon.classList.contains("fa-play")) {
+            icon.classList.remove("fa-play");
+            icon.classList.add("fa-pause");
+            text.innerHTML = "Hide";
+            //} else {
+            //icon.classList.remove("fa-pause");
+            //icon.classList.add("fa-play");
+            //text.innerHTML = "Show";
+        }
+    });
     //Button Stop
     //document.querySelector(".fa-play").addEventListener("click", pausePlayButton);
     //function pausePlayButton(): void {
