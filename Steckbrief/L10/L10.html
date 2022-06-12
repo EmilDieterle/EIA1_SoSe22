@@ -10,16 +10,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/5e8370895b.js" crossorigin="anonymous"></script>
 </head>
-<body>
-   <header>
+<div class = "container"><body>
+    <header>
         <h1>ToDo App</h1>
-        <h3>0 in total</h3>
+        <h3>3 in total</h3>
     </header>
     <main>
-        <input type="text">
+        <div id = "input-field">
+        <input type="text" placeholder="Add another Task">
+         <i onclick="newElement()" class="fa-solid fa-plus"></i>
+        </div>
+
+        <ul>
+            <li>
+            <i class="fa-regular fa-circle"></i>
+            <i class="fa-regular fa-circle-check hidden"></i>Get snacks for New years Eve <i class="fa-regular fa-trash-can"></i></li>
+            <li class="checked"><i class="fa-regular fa-circle"></i>
+                <i class="fa-regular fa-circle-check hidden"></i>Visit the family<i class="fa-regular fa-trash-can"></i></li>
+            <li><i class="fa-regular fa-circle"></i>
+                <i class="fa-regular fa-circle-check hidden"></i>Complete this EIA Project<i class="fa-regular fa-trash-can"></i></li>
+          </ul>
         <i class="fa-regular fa-circle"></i>
         <i class="fa-regular fa-circle-check hidden"></i>
         <i class="fa-regular fa-trash-can"></i>
     </main>
-</body>
+</body></div>
 </html>

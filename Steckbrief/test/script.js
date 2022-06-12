@@ -48,5 +48,16 @@ window.addEventListener("load", function () {
     for (let index = 0; index < names.length; index++) {
         const element = names[index];
     }
+    document.querySelector("fa-regular fa-circle").addEventListener("click", kreisAnkreuzen);
+    function kreisAnkreuzen() {
+        document.querySelector("fa-regular fa-circle").classList.add("hidden");
+        document.querySelector("fa-regular fa-circle-check").classList.remove("hidden");
+        console.log(kreisAnkreuzen);
+    }
+    document.querySelector("fa-regular fa-circle-check").addEventListener("click", kreisNichtAnkreuzen);
+    function kreisNichtAnkreuzen() {
+        document.querySelector("fa-regular fa-circle-check").classList.add("hidden");
+        document.querySelector("fa-regular fa-circle").classList.remove("hidden");
+    }
 });
 //# sourceMappingURL=script.js.map
