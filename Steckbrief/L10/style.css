@@ -13,3 +13,8 @@ h3 {
 .fa-circle-check {
 color: black;
 }
+
+.hidden {
+
+    display: none !important;
+}
