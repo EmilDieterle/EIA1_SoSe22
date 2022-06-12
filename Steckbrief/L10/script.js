@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
     function kreisAnkreuzen() {
         document.querySelector("fa-regular fa-circle").classList.add("hidden");
         document.querySelector("fa-regular fa-circle-check").classList.remove("hidden");
-        console.log("hallo");
+        console.log(kreisAnkreuzen);
     }
     document.querySelector("fa-regular fa-circle-check").addEventListener("click", kreisNichtAnkreuzen);
     function kreisNichtAnkreuzen() {
