@@ -59,17 +59,19 @@ li {
     list-style: none;
 }
 
-.fa-regular .fa-circle-check {
-color: black;
+.fa-circle-check {
+color: #000000;
 cursor: pointer;
 float: left;
-margin-right: 500px;
+margin-top:-21px;
 }
 
-.fa-regular .fa-circle-check {
+.fa-circle {
 
-    cursor: pointer;
-    float: left;
+color: #000000;
+cursor: pointer;
+float: left;
+margin-top:-21px;
 }
 
 .hidden {
@@ -80,8 +82,9 @@ margin-right: 500px;
 .fa-trash-can {
 
     margin-left: auto;
-    opacity: 1;
+    opacity: 0;
     float: right;
+    margin-top: 5px;
 }
 
 .fa-trash-can:hover {
@@ -91,6 +94,7 @@ margin-right: 500px;
     /*float: right;*/
     cursor: pointer;
     float: right;
+    margin-top: 5px;
  }
 
 i {

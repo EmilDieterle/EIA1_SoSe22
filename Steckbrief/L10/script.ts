@@ -3,12 +3,10 @@ let listContainer = document.getElementById("listContainer");
 let inputField = document.getElementById("inputField");
 var i = 0;
 
-addTask.addEventListener("click", function(){
+addTask.addEventListener("click", function() {
 
     var trash = document.createElement("i");
-    trash.classList.add("fa-regular","fa-trash-can");
-
-    //circleChecked.classList.add("fa-regular fa-circle-check");
+    trash.classList.add("fa-regular", "fa-trash-can");
 
     var list = document.createElement("p");
     list.classList.add("listStyle");
@@ -18,12 +16,13 @@ addTask.addEventListener("click", function(){
 
     var circle = document.createElement("i");
     circle.classList.add("fa-regular", "fa-circle");
-    circle.addEventListener("click", function(){
+    circle.addEventListener("click", function() {
         circle.classList.remove("fa-regular", "fa-circle");
         circle.classList.add("fa-regular", "fa-circle-check");
         if (circle.getAttribute("fa-circle-check")) {
             circle.classList.remove("fa-regular", "fa-circle-check");
             circle.classList.add("fa-regular", "fa-circle");
+            console.log("sds");
         }
 
     });
@@ -36,10 +35,10 @@ addTask.addEventListener("click", function(){
 
     listContainer.appendChild(listItem);
     i++;
-    document.getElementById("tasksInTotal").innerHTML = i +" tasks in total";
+    document.getElementById("tasksInTotal").innerHTML = i + " tasks in total";
 
 
-    list.addEventListener("click", function(){
+    trash.addEventListener("click", function() {
         i--;
         listContainer.removeChild(listItem);
         document.getElementById("tasksInTotal").innerHTML = i + " tasks in total";

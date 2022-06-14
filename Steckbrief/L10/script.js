@@ -5,7 +5,6 @@ var i = 0;
 addTask.addEventListener("click", function () {
     var trash = document.createElement("i");
     trash.classList.add("fa-regular", "fa-trash-can");
-    //circleChecked.classList.add("fa-regular fa-circle-check");
     var list = document.createElement("p");
     list.classList.add("listStyle");
     list.innerText = inputField.value;
@@ -16,6 +15,11 @@ addTask.addEventListener("click", function () {
     circle.addEventListener("click", function () {
         circle.classList.remove("fa-regular", "fa-circle");
         circle.classList.add("fa-regular", "fa-circle-check");
+        if (circle.getAttribute("fa-circle-check")) {
+            circle.classList.remove("fa-regular", "fa-circle-check");
+            circle.classList.add("fa-regular", "fa-circle");
+            console.log("sds");
+        }
     });
     var listItem = document.createElement("div");
     listItem.classList.add("listStyle");
@@ -25,7 +29,7 @@ addTask.addEventListener("click", function () {
     listContainer.appendChild(listItem);
     i++;
     document.getElementById("tasksInTotal").innerHTML = i + " tasks in total";
-    list.addEventListener("click", function () {
+    trash.addEventListener("click", function () {
         i--;
         listContainer.removeChild(listItem);
         document.getElementById("tasksInTotal").innerHTML = i + " tasks in total";
