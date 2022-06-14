@@ -18,6 +18,13 @@ addTask.addEventListener("click", function () {
     circle.addEventListener("click", function () {
         circle.classList.remove("fa-regular", "fa-circle");
         circle.classList.add("fa-regular", "fa-circle-check");
+        if (circle.getAttribute("fa-circle-check")) {
+            console.log("fdfd");
+            circle.classList.remove("fa-regular", "fa-circle");
+            circleChecked.classList.remove("hidden");
+            circle.classList.add("hidden");
+            circleChecked.classList.add("fa-regular", "fa-circle");
+        }
         //circle.addEventListener("click", function() {
         //circle.classList.remove("fa-regular", "fa-circle");
         //circle.classList.add("fa-regular", "fa-circle-check");
