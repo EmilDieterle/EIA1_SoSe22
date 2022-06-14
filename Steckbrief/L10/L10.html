@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L10</title>
+    <title>Aufgabe_00</title>
     <link rel="stylesheet" href="style.css">
     <script src= "script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/5e8370895b.js" crossorigin="anonymous"></script>
 </head>
 <div class = "container"><body>
-    <header>
         <h1>ToDo App</h1>
-        <h3>3 in total</h3>
-    </header>
-    <main>
-        <div id = "input-field">
-        <input type="text" placeholder="Add another Task">
-         <i onclick="newElement()" class="fa-solid fa-plus"></i>
+        <h3 id = "tasksInTotal">0 tasks in total</h3>
+        <div class = "toDo">
+            <input type="text" id="inputField" placeholder="Add another task"> <button id = "addTask">
+                <i class="fa-solid fa-plus"></i></button>
+                <div class = "toDoList" id = "listContainer"></div>
         </div>
-
-        <ul>
-            <li>
-            <i class="fa-regular fa-circle"></i>
-            <i class="fa-regular fa-circle-check hidden"></i>Get snacks for New years Eve <i class="fa-regular fa-trash-can"></i></li>
-            <li class="checked"><i class="fa-regular fa-circle"></i>
-                <i class="fa-regular fa-circle-check hidden"></i>Visit the family<i class="fa-regular fa-trash-can"></i></li>
-            <li><i class="fa-regular fa-circle"></i>
-                <i class="fa-regular fa-circle-check hidden"></i>Complete this EIA Project<i class="fa-regular fa-trash-can"></i></li>
-          </ul>
-        <i class="fa-regular fa-circle"></i>
-        <i class="fa-regular fa-circle-check hidden"></i>
-        <i class="fa-regular fa-trash-can"></i>
-    </main>
 </body></div>
 </html>

@@ -1,3 +1,20 @@
+/*onclick="newElement()"*/
+.toDoList {
+
+    margin-top: 10px;
+}
+
+.listStyle {
+
+    background-color: #ffffff;
+    width: 312px;
+    height: 25px;
+    text-align: center;
+    cursor: context-menu;
+    margin: 0;
+    border-color: #000000;
+}
+
 .container {
     width: 800px;
     margin: auto;
@@ -25,9 +42,15 @@ h3 {
 input {
     width: 300px;
     height: 20px;
-
 }
+.fa-solid .fa-plus {
 
+    cursor: pointer;
+}
+ul {
+    height:100px;
+    width: 100px;
+}
 li {
     background: rgb(255, 255, 255);
     padding: 20px;
@@ -36,8 +59,17 @@ li {
     list-style: none;
 }
 
-.fa-circle-check {
+.fa-regular .fa-circle-check {
 color: black;
+cursor: pointer;
+float: left;
+margin-right: 500px;
+}
+
+.fa-regular .fa-circle-check {
+
+    cursor: pointer;
+    float: left;
 }
 
 .hidden {
@@ -45,18 +77,27 @@ color: black;
     display: none !important;
 }
 
-ul li .fa-trash-can {
-
-    margin-left: auto;
-    opacity: 0;
-}
-
-ul li .fa-trash-can:hover {
+.fa-trash-can {
 
     margin-left: auto;
     opacity: 1;
+    float: right;
+}
+
+.fa-trash-can:hover {
+
+    margin-left: auto;
+    opacity: 1;
+    /*float: right;*/
+    cursor: pointer;
+    float: right;
  }
 
 i {
     margin: 0 10px 0 2px;
 }
+
+  input {
+    width: 300px;
+    padding: 5px;
+  }
